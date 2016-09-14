@@ -72,7 +72,24 @@ public class PokemonTester {
     public void oneSquirtleOneCharmander(){
         assertEquals(9.0, cart.cart(0,1,1), 0.0);
     }
+    @Test
+    public void noPurchase(){
+        assertEquals(0, cart.cart(0,0,0), 0.0);
+    }
     
+    @Test
+    public void negativePurchase(){
+        assertEquals(0, cart.cart(-1,-1,-1), 0.0);
+    }
     
+    @Test
+    public void negativePikachuOneSquirtle(){
+        assertEquals(5.0, cart.cart(-1,1,0), 0.0);
+    }
+    
+    @Test
+    public void onePikachuNegativeSquirtleOneCharmander(){
+        assertEquals(9.9, cart.cart(1,-1,1), 0.0);
+    }
     
 }
