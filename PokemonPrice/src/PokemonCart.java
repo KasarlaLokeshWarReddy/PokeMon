@@ -28,6 +28,12 @@ public class PokemonCart {
         //Calculating the max sold pokemon
         int maxSold = Math.max(Math.max(pika,squi),charm);
         
+        // if maxSold lessthan zero making it zero, to make it possible to create an array with index maxSold
+        if(maxSold<0)
+        {
+            maxSold =0;
+        }
+        
         //Creating an 2D array with 3 rows for three pokemon and max sold coloumns
         boolean[][] setMatrix = new boolean [3][maxSold];
         
