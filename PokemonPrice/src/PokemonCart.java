@@ -29,9 +29,9 @@ public class PokemonCart {
         int maxSold = Math.max(Math.max(pika,squi),charm);
         
         // if maxSold lessthan zero making it zero, to make it possible to create an array with index maxSold
-        if(maxSold<0)
+        if(maxSold<=0)
         {
-            maxSold =0;
+            return bill;
         }
         
         //Creating an 2D array with 3 rows for three pokemon and max sold coloumns
