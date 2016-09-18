@@ -23,11 +23,6 @@ public class PokemonTester {
     
     
 
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
     @Test
     public void noPokemon(){
         assertEquals(0, cart.cart(0,0,0), 0);
@@ -48,6 +43,12 @@ public class PokemonTester {
     @Test
     public void oneEach(){
         assertEquals(12.8, cart.cart(1,1,1), 0.0);
+    }
+    
+    @Test
+    public void threePikachuThreeSquirtle(){
+        // Setting delta value to retain imprecision of Double data type
+        assertEquals(29.7, cart.cart(3,3,0), 0.0000000000001);
     }
     
     @Test
@@ -72,6 +73,7 @@ public class PokemonTester {
     public void oneSquirtleOneCharmander(){
         assertEquals(9.0, cart.cart(0,1,1), 0.0);
     }
+    
     @Test
     public void noPurchase(){
         assertEquals(0, cart.cart(0,0,0), 0.0);
@@ -91,5 +93,6 @@ public class PokemonTester {
     public void onePikachuNegativeSquirtleOneCharmander(){
         assertEquals(9.9, cart.cart(1,-1,1), 0.0);
     }
+    
     
 }
